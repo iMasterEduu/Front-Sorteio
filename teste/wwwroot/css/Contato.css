@@ -1,0 +1,89 @@
+﻿h1 {
+    text-align: center
+}
+h3 {
+    text-align: center
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+.box {
+    border: solid;
+}
+
+.btn-primary {
+    float: right;
+    width: 200px;
+    height: 65px;
+    font-size: 20px;
+}
+
+.Participantes {
+    font-weight: bold;
+    font-size : 20px;
+}
+
+.btn-secondary {
+    width: 367px;
+}
+
+.div-tabela {
+    width: auto;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
+.div-botoes {
+    border: initial;
+}
+.btn-group {
+    width: auto;
+}
+
+.table {
+    width: 800px;
+}
+
+
+.btn-info {
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+}
+
+.table-sorteio{
+    border:solid;
+}
+
+
+
+.div-tabela-sorteio {
+    width: auto;
+    height: 19vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
+.btn-Sorteio {
+    float: right;
+    width: 200px;
+    height: 65px;
+    font-size: 20px;
+}
+
+.btn-sorteio {
+    float: right;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: blue
+}
