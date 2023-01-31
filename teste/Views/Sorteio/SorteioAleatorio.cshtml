@@ -1,0 +1,81 @@
+﻿@model IEnumerable<teste.Models.People>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/css/Contato.css" />
+</head>
+
+
+    <div class="container">
+        <div class="box">
+            <h3>Sorteio de Habilitação</h3>
+            <h1>Ganhadores do sorteio</h1>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <h1>Parabéns aos Ganhadores</h1>
+    <div class="div-tabela-sorteio">
+    <div class="div-sorteio">
+    <table class="table-sorteio">
+        <thead>
+              <tbody>
+            <h3>GANHADOR LISTA IDOSO</h3>
+            @foreach (var item in Model)
+            {
+                @if (item.Cota.ToUpper() == "IDOSO")
+                {
+
+                            <h3>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h3>
+                }
+            }
+            </tbody>
+        </thead>
+    </table>
+    </div>
+    </div>
+  
+    <br />
+     <div class="div-tabela-sorteio">
+    <div class="div-sorteio">
+          <table class="table-sorteio">
+        <thead>
+              <tbody>
+            <h3>GANHADOR LISTA DEFICIENTE FÍSICO</h3>
+            @foreach (var item in Model)
+            {
+                @if (item.Cota.ToUpper() == "DEIFICENTE FÍSICO")
+                {
+                            <h3>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h3>
+                }
+            }
+            </tbody>
+        </thead>
+    </table>
+    </div>
+    </div>
+
+        <br />
+         <div class="div-tabela-sorteio">
+        <div class="div-sorteio">
+          <table class="table-sorteio">
+        <thead>
+              <tbody>
+            <h3>GANHADOR LISTA GERAL</h3>
+            @foreach (var item in Model)
+            {
+                @if (item.Cota.ToUpper() == "GERAL")
+                {
+                            <h3>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h3>
+                }
+            }
+            </tbody>
+        </thead>
+    </table>
+    </div>
+    </div>

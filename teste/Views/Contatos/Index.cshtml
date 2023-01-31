@@ -1,0 +1,70 @@
+﻿@model IEnumerable<teste.Models.People>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Contato.css" />
+</head>
+
+<div class="container" >
+    <div class="box">
+<h3>Sorteio de Habilitação</h3>
+<h1>Lista dos Participantes do Sorteio</h1>
+</div>
+</div><br /><br />
+    
+<p class="Participantes"> Total de participantes : @Model.Select(x => x.TotalParticipante).FirstOrDefault() <a href="@Url.ActionLink("SorteioAleatorio", "Sorteio")" title="Cancelar" class="btn-sorteio btn btn-info">
+         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          REALIZAR SORTEIO 
+    </a> </p> <br />
+
+<div class="div-botoes">
+   <label class="btn btn-secondary active">
+  <a href="@Url.ActionLink("Index", "Contatos", new { Cota = "IDOSO" }, null)" title="Cancelar" class="btn btn-info">
+         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          IDOSOS 
+    </a>
+  </label> 
+     <label class="btn btn-secondary active">
+  <a href="@Url.ActionLink("Index", "Contatos", new { Cota = "DEIFICENTE FÍSICO" }, null)" title="Cancelar" class="btn btn-info">
+         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          DEFICIENTE FISICO
+    </a>
+  </label> 
+     <label class="btn btn-secondary active">
+  <a href="@Url.ActionLink("Index", "Contatos", new { Cota = "GERAL" }, null)" title="Cancelar" class="btn btn-info">
+         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          GERAL 
+    </a>
+  </label> 
+</div>
+
+<div class="div-tabela">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+        </tr>
+    </thead>
+    <tbody>      
+@foreach (var item in Model) {
+            {
+                <tr>
+                    <td>
+                 @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+        </tr>
+        }
+}
+    </tbody>
+</table>
+</div>
