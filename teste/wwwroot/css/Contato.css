@@ -5,11 +5,19 @@ h3 {
     text-align: center
 }
 
+h4{
+    text-align: center;
+    font-size: 25px;
+    color: blue;
+}
+.sublinha{
+    text-decoration: underline;
+}
+
 .container {
     justify-content: center;
     align-items: center;
-    
-  }
+}
 
 .box {
     border: solid;

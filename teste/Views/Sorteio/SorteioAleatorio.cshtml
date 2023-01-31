@@ -25,13 +25,13 @@
     <table class="table-sorteio">
         <thead>
               <tbody>
-            <h3>GANHADOR LISTA IDOSO</h3>
+            <h3>GANHADOR LISTA <u>IDOSO</u> </h3> 
             @foreach (var item in Model)
             {
                 @if (item.Cota.ToUpper() == "IDOSO")
                 {
 
-                            <h3>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h3>
+                            <h4>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h4>
                 }
             }
             </tbody>
@@ -46,12 +46,12 @@
           <table class="table-sorteio">
         <thead>
               <tbody>
-            <h3>GANHADOR LISTA DEFICIENTE FÍSICO</h3>
+            <h3>GANHADOR LISTA <u>DEFICIENTE FÍSICO</u></h3>
             @foreach (var item in Model)
             {
                 @if (item.Cota.ToUpper() == "DEFICIENTE FÍSICO")
                 {
-                            <h3>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h3>
+                            <h4>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h4>
                 }
             }
             </tbody>
@@ -66,12 +66,12 @@
           <table class="table-sorteio">
         <thead>
               <tbody>
-            <h3>GANHADOR LISTA GERAL</h3>
+            <h3>GANHADOR LISTA <u>GERAL</u></h3>
             @foreach (var item in Model)
             {
                 @if (item.Cota.ToUpper() == "GERAL")
                 {
-                            <h3>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h3>
+                            <h4>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h4>
                 }
             }
             </tbody>
