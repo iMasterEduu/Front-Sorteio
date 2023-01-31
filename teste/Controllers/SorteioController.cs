@@ -14,7 +14,7 @@ namespace teste.Controllers
             IEnumerable<People> contatos = null;
 
             using (var client = new HttpClient()) { 
-                client.BaseAddress = new Uri($"https://localhost:5001/api/Sorteio");
+                client.BaseAddress = new Uri($"https://localhost:44369/api/Sorteio");
 
             //HTTP GET
             var responseTaska = client.GetAsync(client.BaseAddress);

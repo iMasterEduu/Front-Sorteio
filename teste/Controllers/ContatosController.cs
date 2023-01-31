@@ -15,7 +15,7 @@ namespace teste.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:5001/api/ListaPessoas");
+                client.BaseAddress = new Uri("https://localhost:44369/api/ListaPessoas");
 
                 //HTTP GET
                 var responseTask = client.GetAsync(client.BaseAddress);

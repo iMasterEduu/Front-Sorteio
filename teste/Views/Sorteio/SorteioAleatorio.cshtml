@@ -49,7 +49,7 @@
             <h3>GANHADOR LISTA DEFICIENTE FÍSICO</h3>
             @foreach (var item in Model)
             {
-                @if (item.Cota.ToUpper() == "DEIFICENTE FÍSICO")
+                @if (item.Cota.ToUpper() == "DEFICIENTE FÍSICO")
                 {
                             <h3>@Html.DisplayFor(modelItem => item.CPF) - @Html.DisplayFor(modelItem => item.Nome)</h3>
                 }
